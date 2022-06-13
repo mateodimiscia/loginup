@@ -1,0 +1,39 @@
+
+<div class = "container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="title"> LOGINUP </div>
+                <div class="subtitle"> Por favor, ingrese los datos requeridos para ingresar al sistema. </div>
+
+                <div class="form">
+                    <form>
+
+                        <div class="mb-3">
+                            <input type="email"
+                            placeholder= "Correo Electrónico"
+                            class="form-control"
+                            id="logEmail"
+                            aria-describedby="emailHelp"
+                            required>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="password"
+                            placeholder= "Contraseña"
+                            class="form-control"
+                            id="logPass"
+                            required>
+                        </div>
+
+                         <a href="/home" class="btn btn-primary btn-lg active" role="button">Iniciar Sesión</a>
+
+                    </form>
+
+                </div>
+
+                  <a routerLink="/registro">¿Nuevo Usuario? ¡Haga click para registrarse!</a>
+            </div>
+        </div>
+    </div>
+</div>

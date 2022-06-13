@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="title">LOGINUP</div>
+
+        <div class="subtitle">
+          Por favor, ingrese los datos requeridos para poder registrarse dentro
+          del sistema.
+        </div>
+
+        <div class="form">
+          <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <input
+                type="email"
+                placeholder="Correo Electrónico"
+                class="form-control"
+                id="regEmail"
+                aria-describedby="emailHelp"
+                ngModel
+                required
+                [(ngModel)]="usuario.email"
+                name="email"
+              />
+            </div>
+
+            <div class="mb-3">
+
+                <input
+                  type="text"
+                  placeholder="Nombre de usuario"
+                  class="form-control"
+                  id="regUsuario"
+
+                  ngModel
+                  required
+                  [(ngModel)]="usuario.username"
+                  name="usuario"
+                />
+
+            </div>
+
+            <div class="mb-3">
+              <input
+                type="password"
+                placeholder="Contraseña"
+                class="form-control"
+                id="regPass"
+                pattern="^\S{6,}$"
+                onchange="if(this.checkValidity()) form.repPass.pattern = this.value;"
+                required
+                [(ngModel)]="usuario.password"
+                name="password"
+              />
+            </div>
+
+            <div class="mb-3">
+              <input
+                type="password"
+                placeholder="Repetir Contraseña"
+                class="form-control"
+                id="repPass"
+                pattern="^\S{6,}$"
+                onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Contraseñas no coinciden!!!' : '');"
+                required
+                [(ngModel)]="usuario.password"
+                name="password"
+              />
+            </div>
+
+            <button class="btn btn-primary">Registrarse</button>
+          </form>
+        </div>
+
+        <a routerLink="/login"
+          >¿Ya es Usuario? ¡Haga click para Iniciar sesión!</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
