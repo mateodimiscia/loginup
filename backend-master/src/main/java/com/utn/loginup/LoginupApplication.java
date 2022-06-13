@@ -9,5 +9,5 @@ public class LoginupApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LoginupApplication.class, args);
 	}
-
+//comentario de prueba
 }

@@ -27,7 +27,7 @@ export class RegistroComponent implements OnInit {
 
   };
 
-
+//comentario de prueba
 
 registro(form:Usuario){
 
